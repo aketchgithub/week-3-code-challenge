@@ -1,0 +1,36 @@
+body{
+    background-color: white;
+}
+
+#menu{
+ background-color: rgb(80, 73, 154);
+ text-align: center;
+}
+#img{
+    background-color: purple;
+    text-align: center;
+}
+#decript{
+    background-color: rgb(80, 73, 154);
+    text-align: center;
+}
+#moviecard{
+    background-color: darkolivegreen;
+    
+}
+#poster{
+    border-width: 0em;
+    width: auto;
+
+}
+.col-4-bg-danger{
+    width: 400px;
+}
+#title,#runtime,#showtime, #film-info,#ticket-num,#description{
+    background-color: white;
+    width: 970px;
+    margin: 1em;
+}
+.description-box{
+     background-color: white;
+}

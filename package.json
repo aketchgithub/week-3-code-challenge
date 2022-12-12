@@ -1,0 +1,28 @@
+{
+  "name": "week-3-code-challenge",
+  "version": "1.0.0",
+  "description": "My week three code challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aketchgithub/week-3-code-challenge.git"
+  },
+  "keywords": [
+    "GET",
+    "FETCH",
+    "API"
+  ],
+  "author": "Victor Aketch[@aketchgithub]",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aketchgithub/week-3-code-challenge/issues"
+  },
+  "homepage": "https://github.com/aketchgithub/week-3-code-challenge#readme",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}
