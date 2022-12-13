@@ -1,11 +1,11 @@
-const url = "http://localhost:3000/films"
+const url = "https://aketchgithub.github.io/myFiles/db.json"
 const firstFilmApi = url
 
 document.addEventListener('DOMContentLoaded', () => {
    const fetchFirstFilm = () => {
       fetch(url)
       .then(resp => resp.json())
-      .then(film =>renderFirstFilm(film[0])
+      .then(film =>renderFirstFilm(film.films[0])
       )
 
        //console.log(data)
@@ -63,13 +63,13 @@ function menu() {
       fetch(url)
          .then(resp => resp.json())
          .then(data =>{
-            data.forEach(item => {
+            data.films.forEach(item => {
 
       let titles = document.createElement("li")
       titles.addEventListener('click', ()=> {
          console.log("clicked")
          const i = item.id
-         renderPoster(data[i-1])
+         renderPoster(data.films[i-1])
 
       })
       titles.innerText= item.title
