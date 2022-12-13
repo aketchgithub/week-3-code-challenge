@@ -124,16 +124,20 @@ function renderPoster(film){
 
  const tickets= document.getElementById('ticket-num')
  tickets.innerText = film.capacity-film.tickets_sold
-let ticketsAvailable= film.capacity-film.tickets_sold
+
  let btn = document.createElement('button')
- btn.addEventListener('click',() => {
+ btn.addEventListener('click',(e) => {
+   e.preventDefault
      //console.log('I was clicked')
-     if(ticketsAvailable > 0){
-      ticketsAvailable -=1
+     film.tickets_sold +=1
+   
+     let ticketsAvailable= film.capacity-film.tickets_sold
+     if(film.capacity > film.tickets_sold){
+
       document.getElementById('ticket-num').innerText=ticketsAvailable
-      
+      updateTicketNum(film)
      }
-     else if( ticketsAvailable<1){
+     else if( film.capacity = film.tickets_sold){
       document.getElementById('ticket-num').innerText='Sold Out!'
      }
  })
@@ -149,17 +153,17 @@ let ticketsAvailable= film.capacity-film.tickets_sold
  }
 
  function updateTicketNum(obj) {
-   options = {
+   fetch (`http://localhost:3000/films/${obj.id}`, {
       method: 'PATCH',
       headers: {
          "content-type": "application/json",
          "accept": "application/json"
       },
       body: JSON.stringify(obj)
-   }
-   fetch((url + id), options)
+   })
+   
       .then(response => response.json())
-      .then(data => {
-         renderFirstFilm(data)
-      })
+      .then(data => { console.log(data)
+         // renderFirstFilm(data)
+      }) 
 }

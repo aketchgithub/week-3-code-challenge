@@ -20,7 +20,8 @@ body{
 }
 #poster{
     border-width: 0em;
-    width: auto;
+    width: 430px;
+    align-items: center;
 
 }
 .col-4-bg-danger{
@@ -28,9 +29,12 @@ body{
 }
 #title,#runtime,#showtime, #film-info,#ticket-num,#description{
     background-color: white;
-    width: 970px;
+    width: 400px;
     margin: 1em;
 }
 .description-box{
      background-color: white;
+}
+h1{
+    background-color: aquamarine;
 }
